@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="/spcode/head"></head>
+
+
+<body>
+
+
+<nav th:replace="/spcode/nav :: nav-front"></nav>
+
+	<div class="container-fluid mb-5">
+		<!-- Example row of columns -->
+		<div class="row">
+		<div th:replace="/spcode/categories"></div>
+			<div class="col">
+				<div class="col-7" th:utext="${page.content}"></div>
+				<div class="col"></div>
+			</div>
+		</div>
+
+	</div>
+	<!-- /container -->
+
+
+<footer th:replace="/spcode/footer"></footer>
+
+</body>
+</html>
