@@ -58,7 +58,7 @@ public void setQuantity(int quantity) {
 }
 
 public Cart(int id, String name, int quantity, String price, String image) {
-	super();
+	
 	this.id = id;
 	this.name = name;
 	this.quantity = quantity;
