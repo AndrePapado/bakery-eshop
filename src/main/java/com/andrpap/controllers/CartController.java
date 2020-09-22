@@ -92,7 +92,7 @@ public class CartController {
     }
 
     @GetMapping("/remove/{id}")
-    public String remove(@PathVariable int id, HttpSession session, Model model, HttpServletRequest httpServletRequest) {
+    public String remove(@PathVariable int id, HttpSession session, Model themodel, HttpServletRequest httpServletRequest) {
 
         HashMap<Integer, Cart> cart = (HashMap<Integer, Cart>) session.getAttribute("cart");
 
@@ -117,16 +117,18 @@ public class CartController {
     }
 
     @RequestMapping("/view")
-    public String view(HttpSession session, Model model) {
+    public String view(HttpSession session, Model themodel) {
 
         if (session.getAttribute("cart") == null) {
             return "redirect:/";
         }
 
         HashMap<Integer, Cart> cart = (HashMap<Integer, Cart>) session.getAttribute("cart");
-        model.addAttribute("cart", cart);
-        model.addAttribute("notCartViewPage", true);
+        themodel.addAttribute("cart", cart);
+        themodel.addAttribute("notCartViewPage", true);
 
         return "cart";
     }
+    
+   
 }

@@ -21,6 +21,7 @@ import com.andrpap.models.entities.Page;
 // gia na einai to menu se oles tis selides //
 
 @ControllerAdvice
+@SuppressWarnings("unchecked")
 public class CommonParts {
 
 	 @Autowired
