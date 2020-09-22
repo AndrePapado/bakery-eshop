@@ -37,7 +37,7 @@ public class User implements UserDetails{
 	private String email;
 	
 	@Column(name="phone_number")
-	private String phonenumber;
+	private String phoneNumber;
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -102,12 +102,12 @@ public class User implements UserDetails{
 		this.email = email;
 	}
 
-	public String getPhonenumber() {
-		return phonenumber;
+	public String getPhoneNumber() {
+		return phoneNumber;
 	}
 
-	public void setPhonenumber(String phonenumber) {
-		this.phonenumber = phonenumber;
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 
 	public static long getSerialversionuid() {
