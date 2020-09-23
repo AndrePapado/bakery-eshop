@@ -15,6 +15,7 @@ private String price;
 
 private String image;
 
+
 public int getId() {
 	return id;
 }
@@ -30,7 +31,6 @@ public String getName() {
 public void setName(String name) {
 	this.name = name;
 }
-
 
 
 public String getPrice() {

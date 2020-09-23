@@ -32,7 +32,8 @@ public class Admin implements UserDetails{
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		// TODO Auto-generated method stub
+		
+		
 		return Arrays.asList(new SimpleGrantedAuthority("ROLE_ADMIN"));
 	}
 

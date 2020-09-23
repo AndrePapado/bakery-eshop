@@ -21,8 +21,8 @@ import com.andrpap.models.entities.Product;
 
 
 @Controller
-@RequestMapping("/categor")
-public class CategoriesContoller {
+@RequestMapping("/category")
+public class CategoriesController {
 
 	@Autowired
 	private CategoryRepository ctgr;
@@ -35,7 +35,7 @@ public class CategoriesContoller {
 	@GetMapping("/{slug}")
     public String category(@PathVariable String slug, Model themodel, @RequestParam(value="page", required = false) Integer p) {
 
-        int perPage = 6;
+        int perPage = 5;
         int page = (p != null) ? p : 0;
         Pageable pageable = PageRequest.of(page, perPage);
         long count = 0;

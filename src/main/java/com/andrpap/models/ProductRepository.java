@@ -15,7 +15,7 @@ public interface ProductRepository extends JpaRepository<Product,Integer>{
 
     Product findBySlugAndIdNot(String slug, int id);
     
-    Page<Product> findAll(Pageable pagable);
+    Page <Product> findAll(Pageable pagable);
 
     List<Product> findAllByCategoryId(String categoryId, Pageable pageable);
 
