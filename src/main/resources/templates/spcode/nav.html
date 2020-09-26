@@ -13,7 +13,7 @@
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item active" th:each="page: ${cpages}"><a
 				th:if="${page.slug !='home'}" class="nav-link"
-				href="@{'/' + ${page.slug}}" th:text="${page.title}"> <span
+			th:href="@{'/' + ${page.slug}}" th:text="${page.title}"> <span
 					class="sr-only">(current)</span>
 			</a></li>
 
